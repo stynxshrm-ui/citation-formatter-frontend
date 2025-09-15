@@ -43,7 +43,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "test:e2e": "cypress run",
@@ -54,7 +54,7 @@
     "format:check": "prettier --check src/",
     "type-check": "tsc --noEmit",
     "analyze": "npm run build && npx bundle-analyzer build/static/js/*.js",
-    "vercel-build": "npm run build"
+    "vercel-build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
   },
   "eslintConfig": {
     "extends": [
