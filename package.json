@@ -43,7 +43,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "test:e2e": "cypress run",
@@ -54,19 +54,11 @@
     "format:check": "prettier --check src/",
     "type-check": "tsc --noEmit",
     "analyze": "npm run build && npx bundle-analyzer build/static/js/*.js",
-    "vercel-build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
+    "vercel-build": "react-scripts build"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "airbnb"
-    ],
-    "rules": {
-      "react/react-in-jsx-scope": "off",
-      "import/extensions": "off",
-      "import/no-unresolved": "off"
-    }
+    "extends": [],
+    "rules": {}
   },
   "browserslist": {
     "production": [
