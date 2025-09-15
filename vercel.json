@@ -23,7 +23,7 @@
     }
   ],
   "env": {
-    "REACT_APP_API_URL": "@react_app_api_url",
+    "REACT_APP_API_URL": "https://citation-formatter-backend.onrender.com",
     "REACT_APP_ENV": "production",
     "REACT_APP_ENABLE_DARK_MODE": "true",
     "REACT_APP_ENABLE_ANALYTICS": "false",
@@ -31,7 +31,7 @@
   },
   "build": {
     "env": {
-      "REACT_APP_API_URL": "@react_app_api_url"
+      "REACT_APP_API_URL": "https://citation-formatter-backend.onrender.com"
     }
   }
 }
