@@ -368,6 +368,7 @@ function App() {
                     Query: "{match.query}"
                   </h4>
                   <button
+                    type="button"
                     onClick={() => handleSelectNone(match.index)}
                     style={{
                       padding: '6px 12px',
@@ -377,7 +378,7 @@ function App() {
                       fontWeight: '500',
                       cursor: 'pointer',
                       backgroundColor: '#6c757d',
-                      color: 'white'
+                      color: 'white',
                     }}
                   >
                     Select None
@@ -404,6 +405,7 @@ function App() {
                       </div>
                       {optIndex !== 0 && (
                         <button
+                          type="button"
                           onClick={() => handleSelectOption(match.index, optIndex)}
                           style={{
                             padding: '6px 12px',
@@ -414,7 +416,7 @@ function App() {
                             cursor: 'pointer',
                             backgroundColor: '#007bff',
                             color: 'white',
-                            marginLeft: '10px'
+                            marginLeft: '10px',
                           }}
                         >
                           Select This
@@ -434,6 +436,7 @@ function App() {
               <h2 style={{ color: '#333', margin: 0 }}>Formatted References</h2>
               <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                 <button 
+                  type="button"
                   onClick={() => handleDownload(selectedFormat)}
                   disabled={isReformatting}
                   style={{
@@ -444,12 +447,13 @@ function App() {
                     fontWeight: '500',
                     cursor: isReformatting ? 'not-allowed' : 'pointer',
                     backgroundColor: isReformatting ? '#6c757d' : '#28a745',
-                    color: 'white'
+                    color: 'white',
                   }}
                 >
                   Download {selectedFormat.toUpperCase()}
                 </button>
                 <button 
+                  type="button"
                   onClick={() => handleDownload('bibtex')}
                   disabled={isReformatting}
                   style={{
@@ -460,12 +464,13 @@ function App() {
                     fontWeight: '500',
                     cursor: isReformatting ? 'not-allowed' : 'pointer',
                     backgroundColor: isReformatting ? '#6c757d' : '#17a2b8',
-                    color: 'white'
+                    color: 'white',
                   }}
                 >
                   Download BibTeX
                 </button>
                 <button 
+                  type="button"
                   onClick={() => handleDownload('endnote')}
                   disabled={isReformatting}
                   style={{
@@ -476,7 +481,7 @@ function App() {
                     fontWeight: '500',
                     cursor: isReformatting ? 'not-allowed' : 'pointer',
                     backgroundColor: isReformatting ? '#6c757d' : '#6f42c1',
-                    color: 'white'
+                    color: 'white',
                   }}
                 >
                   Download EndNote
