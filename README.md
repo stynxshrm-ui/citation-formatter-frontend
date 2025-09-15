@@ -132,26 +132,61 @@ npm run test:e2e:open
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Quick Deploy
+
+#### Vercel (Recommended)
 ```bash
-# Deploy to Vercel
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
 vercel --prod
 ```
 
-### Netlify
+#### Netlify
 ```bash
-# Deploy to Netlify
+# Install Netlify CLI
+npm i -g netlify-cli
+
+# Build and deploy
+npm run build
 netlify deploy --prod --dir=build
 ```
 
-### Docker
+#### Docker
 ```bash
-# Build Docker image
-docker build -t citation-formatter-frontend .
+# Build and run with Docker Compose
+docker-compose up -d
 
-# Run container
+# Or build manually
+docker build -t citation-formatter-frontend .
 docker run -p 3000:80 citation-formatter-frontend
 ```
+
+### Automated Deployment
+
+This repository includes GitHub Actions workflows for automated deployment to:
+- **Vercel**: Automatic deployment on push to main
+- **Netlify**: Automatic deployment on push to main  
+- **Docker**: Build and push to GitHub Container Registry
+
+### Environment Variables
+
+Set these environment variables for production:
+
+**Required:**
+- `REACT_APP_API_URL`: Your backend API URL
+  - For Render backend: `https://your-backend-name.onrender.com`
+  - For local development: `http://localhost:3000`
+
+**Optional:**
+- `REACT_APP_ENV`: `production`
+- `REACT_APP_ENABLE_DARK_MODE`: `true`
+- `REACT_APP_ENABLE_ANALYTICS`: `false`
+
+### Detailed Deployment Guide
+
+For comprehensive deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## 🔒 Security
 

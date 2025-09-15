@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "name": "citation-formatter-frontend",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "@react_app_api_url",
+    "REACT_APP_ENV": "production",
+    "REACT_APP_ENABLE_DARK_MODE": "true",
+    "REACT_APP_ENABLE_ANALYTICS": "false",
+    "REACT_APP_ENABLE_DEBUG": "false"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "@react_app_api_url"
+    }
+  }
+}
