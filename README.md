@@ -217,8 +217,8 @@ This project is licensed under the MIT License.
 
 ## 🔗 Related Projects
 
-- **Backend**: [citation-formatter-backend](https://github.com/yourusername/citation-formatter-backend)
-- **Documentation**: [Full Documentation](https://github.com/yourusername/citation-formatter)
+- **Backend**: [citation-formatter-backend](https://github.com/stynxshrm-ui/citation-formatter-backend)
+- **Documentation**: [Full Documentation](https://github.com/stynxshrm-ui/citation-formatter)
 
 ## 📞 Support
 
